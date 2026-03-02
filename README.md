@@ -83,6 +83,8 @@ gtm-engineering/
 │   ├── product-analytics.md # Amplitude, Mixpanel, etc.
 │   ├── crm.md               # Salesforce, HubSpot
 │   └── conversation-intel.md # Gong, Chorus
+├── tech-stack.md            # GTM tool inventory (Attio, Slack, Apollo, etc.)
+├── citations.md             # Documentation sources and citation guides
 └── README.md                # This file
 ```
 
@@ -111,6 +113,10 @@ gtm-engineering/
 | Briefing Generation | 4+ hours | Scheduled/automated | Always current |
 
 ## Resources & Inspiration
+
+### Opulentia Sources
+- **docs.opulentia.ai** — Internal documentation, API reference, integration guides
+- **use.opulentia.ai** — User-facing docs, getting started, feature guides
 
 ### Must-Read Sources
 - **Founding Sales** (foundingsales.com) — Founder-led sales playbook
