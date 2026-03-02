@@ -1,0 +1,139 @@
+---
+description: Prospect enrichment and signal detection for personalized outreach
+globs:
+alwaysApply: false
+---
+
+# Prospect Enrichment
+
+## Overview
+
+Multi-source data aggregation to understand prospects before outreach and personalize GTM motions.
+
+## When to Use This Rule
+
+- Outbound campaign personalization
+- Account-based marketing
+- Inbound lead qualification
+- Pre-demo research
+- Competitive intelligence
+
+## Data Sources
+
+### Firmographic Data
+- Company size (employees, revenue)
+- Industry and sub-industry
+- Geography / regions
+- Company structure
+
+### Technographic Signals
+- Tools they currently use
+- Integration opportunities
+- Tech stack analysis
+- Build vs. buy signals
+
+### Intent Signals
+- Job postings (hiring for relevant roles)
+- News and announcements
+- Funding events
+- Leadership changes
+
+### Behavioral Signals
+- Website visits
+- Content consumption
+- Event attendance
+- Product page views
+
+### Relationship Signals
+- LinkedIn connections
+- Mutual contacts
+- Previous interactions
+- Partner relationships
+
+## Enrichment Workflow
+
+### Step 1: Identify Target
+
+Input: Company name, domain, or LinkedIn URL
+
+### Step 2: Aggregate Data (Parallel)
+
+Query all sources simultaneously:
+```javascript
+const enrichment = await Promise.all([
+  getFirmographics(company),
+  getTechnographics(domain),
+  getIntentSignals(company),
+  getNews(company),
+  getJobPostings(company),
+  getLinkedInData(company)
+]);
+```
+
+### Step 3: Extract Signals
+
+Use AI to identify:
+- Buying signals
+- Pain points
+- Relevant use cases
+- Competitive situation
+- Key stakeholders
+
+### Step 4: Score & Prioritize
+
+Calculate:
+- Fit score (ICP match)
+- Intent score (buying signals)
+- Engagement score (interactions)
+- Priority rank
+
+### Step 5: Deliver Insights
+
+Output:
+- Enrichment summary
+- Recommended approach
+- Key contacts
+- Talking points
+- Similar customers
+
+## Integration Points
+
+### For Sales
+Enrich leads before outreach:
+- Personalize cold emails
+- Identify relevant use cases
+- Find mutual connections
+
+### For Marketing
+Build target account lists:
+- ICP scoring
+- Intent prioritization
+- Campaign segmentation
+
+### For CS
+Understand customer context:
+- Company changes
+- Expansion signals
+- Risk indicators
+
+## Tools Stack
+
+- **Clay**: Enrichment workflows
+- **Clearbit**: Firmographic data
+- **BuiltWith**: Technographics
+- **LinkedIn**: Professional signals
+- **G2/Capterra**: Review signals
+
+## Best Practices
+
+1. **Enrichment is ongoing** - Not one-time, update continuously
+2. **Quality over quantity** - Focus on actionable signals
+3. **Privacy compliance** - Follow GDPR/CCPA
+4. **Human verification** - Validate critical signals
+
+## Common Mistakes
+
+1. **Stale data** - Refresh enrichment regularly
+2. **Over-enrichment** - Too much data, no action
+3. **Ignoring signals** - Collect but don't use
+4. **Manual processes** - Automate what you can

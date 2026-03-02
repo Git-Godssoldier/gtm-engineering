@@ -1,0 +1,112 @@
+---
+description: Automated deck and content generation for QBRs, pitch decks, and customer materials
+globs:
+alwaysApply: false
+---
+
+# Automated Deck Generation
+
+## Overview
+
+Deck generation creates customer-facing materials by aggregating data from multiple sources and transforming it into compelling narrative content.
+
+**The Two Hardest Problems:**
+1. Aggregating scattered data
+2. Transforming that data into compelling narrative content
+
+**Solution:** Automate data aggregation and initial content generation, delivering 90% complete decks for human review.
+
+## When to Use This Rule
+
+- Quarterly Business Reviews (QBRs)
+- Executive Business Reviews (EBRs)
+- Renewal presentations
+- Sales pitch decks
+- Executive briefings
+- Onboarding guides
+
+## The Clay Model (6 hours → 10 minutes)
+
+### Before Automation
+- 45 min: Pull product usage from Snowflake
+- 30 min: Review CRM records
+- 60 min: Analyze Gong transcripts
+- 90 min: Build narrative
+- 2 hrs: Create slides
+- 30 min: Review
+
+### After Automation
+Type `/generate_qbr [account_name]` → receive 90% complete deck in 10 minutes.
+
+## Data Sources
+
+### Primary Sources
+1. **Product Usage** (Snowflake, BigQuery, Amplitude): Account metrics, user activity, feature adoption
+2. **CRM** (Salesforce, HubSpot): Account info, contacts, opportunity context
+3. **Conversation Intel** (Gong, Chorus): Use cases, pain points, expansion signals, quotes
+4. **Support** (Zendesk, Linear): Ticket volume, resolution time, CSAT
+5. **Marketing** (Customer.io, Iterable): Email engagement, campaign participation
+
+### Secondary Sources
+6. **Public Signals**: LinkedIn, news, hiring patterns
+
+## Standard QBR Template Structure
+
+**Slide 1: Title** - Customer logo, account name, quarter, AM name
+
+**Slide 2: Executive Summary** - 3-4 key accomplishments, high-level metrics, strategic wins
+
+**Slide 3: Usage Overview** - Total events/users, workflow volume, trend chart
+
+**Slide 4: Key Use Cases** - 3 use cases with outcomes + customer quote
+
+**Slide 5: Usage Deep Dive** - Feature adoption, user distribution, trends
+
+**Slide 6: Support & Health** - Ticket volume, health score, risks
+
+**Slide 7: Forward-Looking** - Discussed but not implemented, recommendations
+
+**Slide 8: Credit Pacing** - Usage vs contract, expansion opportunities
+
+**Slide 9: Appendix** - Sources, methodology, definitions
+
+## Workflow Steps
+
+### Step 1: Trigger
+Manual: `/generate_qbr [account_name]`
+Scheduled: Before QBRs, monthly for strategic accounts
+
+### Step 2: Aggregate Data
+Query all sources in parallel, normalize into unified format.
+
+### Step 3: Generate Narrative
+Use AI to create structured content with:
+- Titles and bullets
+- Chart recommendations
+- Source citations
+
+### Step 4: Generate Charts
+Use generate_chart tool for visualizations:
+- Trend lines for usage over time
+- Bar charts for feature breakdown
+- Tables for detailed metrics
+
+### Step 5: Populate Template
+Fill PPTX template with content, charts, and styling.
+
+### Step 6: Deliver
+Send via Slack, email, or CRM note.
+
+## Quality Standards
+
+- **90% Complete**: Automation handles 90%, humans review last 10%
+- **Source Citations**: Every data point must cite its source
+- **Exact Numbers**: Use precise values, not approximations
+- **Brand Consistency**: Follow company brand guidelines
+
+## Common Mistakes
+
+1. **Generic Content**: Always personalize to account context
+2. **Stale Data**: Always pull current data, not snapshots
+3. **Missing Citations**: Every claim needs a source
+4. **Over-Automation**: Leave room for human personalization

@@ -1,0 +1,177 @@
+---
+description: Sales demo automation for personalized, product-led demonstrations
+globs:
+alwaysApply: false
+---
+
+# Sales Demo Automation
+
+## Overview
+
+Demo automation creates personalized, data-rich demos at scale that show prospects exactly what success looks like with your product.
+
+**Key Insight from Amplitude:**
+> "For strategic customers, you really need to resonate with their unique use cases. By showing them what their business will look like when they start using [your product]."
+
+## When to Use This Rule
+
+- Strategic account demos
+- Complex products needing context
+- Competitive situations
+- Enterprise deals where generic demos fail
+
+## The Amplitude Model
+
+### Before Automation
+- Spoofed analytics data from Google Sheets
+- Only showed analytics, not full platform
+- Generic demos for all prospects
+- 5-10 demos per week with manual prep
+
+### After Automation
+- Custom demo websites matching prospect's product
+- Simulated user journeys with browser automation
+- Full-platform demos (analytics + session replays + guides + experiments)
+- 40+ custom demos, $10M+ influenced pipeline
+
+## Components
+
+### 1. Custom Demo Environments
+
+Build websites that resemble the prospect's actual product using AI coding tools (Claude Code, Cursor, Bolt, Lovable).
+
+**Example:** For an e-commerce prospect, build a mock e-commerce site.
+
+### 2. User Journey Simulation
+
+Define customer journeys relevant to the prospect's business:
+- Car buyer customizing a vehicle
+- Loyalty program visitor abandoning a form
+- B2B buyer requesting a demo
+
+### 3. Browser Automation
+
+Use Browserbase + Stagehand SDK to:
+- Simulate realistic user behavior
+- Navigate through defined journeys
+- Interact with forms and buttons
+- Generate event data
+
+### 4. Custom Logic Injection
+
+Between AI-generated actions:
+- Produce event data
+- Generate session replays
+- Create guides and surveys data
+- Enable Global Agent / AI insights
+
+### 5. Full Platform Demo
+
+Generate demos across entire product:
+- Analytics dashboards
+- Session replays
+- In-app guides
+- Experiments
+- AI-powered insights
+
+## Workflow
+
+### Step 1: Enrichment Pipeline (Automatic)
+
+When demo is scheduled, run enrichment:
+- Firmographic data
+- Technographic signals
+- Recent news
+- Hiring patterns
+
+### Step 2: Use Case Identification
+
+Based on enrichment:
+- Industry-specific examples
+- Relevant use cases with ROI estimates
+- Integration callouts for tools they use
+- Competitive positioning
+
+### Step 3: Demo Environment Generation
+
+Build custom demo website:
+- Match prospect's product/service
+- Include relevant user journeys
+- Pre-populate with simulated data
+
+### Step 4: User Behavior Simulation
+
+Run browser automation:
+- Simulate realistic journeys
+- Generate diverse user types
+- Create varied behaviors
+
+### Step 5: Data Injection
+
+Inject custom logic:
+- Event tracking
+- Session recording
+- Feature flags
+- A/B test data
+
+### Step 6: Demo Delivery
+
+Deliver to sales engineer:
+- Demo URL
+- Guide for key flows
+- Suggested talking points
+- ROI estimates
+
+## Request Flow
+
+Sales Engineer → Slack Request → System → Custom Demo Environment
+
+Example request:
+```
+/demo [prospect_name] [industry] [use_cases]
+```
+
+System returns:
+- Demo URL
+- Key journeys to highlight
+- Talking points
+- Similar customer proof points
+
+## Metrics
+
+- **40+** custom demo environments built
+- **5,600+** simulated user journeys
+- **$10M+** influenced pipeline
+- **Push → Pull**: Sales team actively requesting more
+
+## Best Practices
+
+### 1. Match the Prospect's World
+Demo should feel like their product, not yours.
+
+### 2. Show Real User Journeys
+Not just happy paths—include realistic friction points.
+
+### 3. Enable Self-Serve
+Let sales engineers generate demos without bottleneck.
+
+### 4. Connect to Pipeline
+Track demo usage to Salesforce opportunities.
+
+### 5. Iterate Based on Feedback
+Sales requests will guide what to build next.
+
+## Tools Stack
+
+- **Browserbase**: Cloud browser automation
+- **Stagehand SDK**: AI-powered browser actions
+- **Claude Code / Cursor**: Generate demo websites
+- **Slack**: Request interface
+- **Salesforce**: Pipeline tracking
+
+## Common Mistakes
+
+1. **Generic Demos**: Defeats the purpose—always personalize
+2. **Over-Engineering**: Start simple, iterate
+3. **Ignoring Sales Feedback**: Build what they ask for
+4. **Manual Bottlenecks**: Automate everything possible

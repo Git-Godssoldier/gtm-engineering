@@ -1,0 +1,289 @@
+---
+description: Core GTM engineering philosophy and principles for Opulentia
+globs:
+alwaysApply: true
+---
+
+# GTM Engineering Overview
+
+## What is GTM Engineering?
+
+GTM Engineering is the systematic application of automation, data integration, and AI to scale go-to-market motions that traditionally required manual human effort.
+
+## Core Domains
+
+### 1. Sales Demo Automation
+Creating personalized, data-rich demos at scale that show prospects exactly what success looks like with your product.
+
+**Key Insight from Amplitude:**
+> "For strategic customers, you really need to resonate with their unique use cases. By showing them what their business will look like when they start using [your product]."
+
+**Automation Approach:**
+- Build custom demo websites using AI coding tools (Claude Code, Cursor, Bolt)
+- Define customer journeys relevant to the prospect's business
+- Use browser automation (Browserbase + Stagehand) to simulate realistic user behavior
+- Inject custom logic to produce event data, session replays, and analytics
+- Generate full-platform demos across all product capabilities
+
+### 2. Automated Deck/Content Generation
+Generating customer-facing materials (QBRs, pitch decks, executive briefings) by aggregating data from multiple sources.
+
+**Key Insight from Clay:**
+> "The system works because it solves the two hardest problems in deck creation: aggregating scattered data and transforming that data into compelling narrative content."
+
+**Automation Approach:**
+- Query data warehouse for product usage metrics
+- Pull CRM context (account info, contacts, opportunity data)
+- Process conversation transcripts for implemented use cases and pain points
+- Use AI to generate narrative content
+- Populate slide templates with data, charts, and text
+- Deliver 90% complete deck for human review
+
+### 3. Prospect Enrichment
+Multi-source data aggregation to understand prospects before outreach.
+
+**Data Sources:**
+- Firmographic data (company size, industry, tech stack)
+- Technographic signals (tools they use)
+- Recent news and announcements
+- Hiring patterns (job postings)
+- LinkedIn activity and changes
+- Product usage patterns from similar customers
+
+### 4. Customer Success Automation
+Usage analytics, health scoring, and renewal playbooks.
+
+**Key Components:**
+- Real-time usage dashboards
+- Health score calculation (usage + engagement + sentiment)
+- Automated QBR generation
+- Expansion opportunity detection
+- Churn risk alerts
+
+### 5. Revenue Intelligence
+Conversation analysis, deal coaching, and forecasting.
+
+**Capabilities:**
+- Transcription and analysis of sales calls
+- Deal risk detection
+- Competitive mention tracking
+- Next-best-action recommendations
+- Forecast accuracy improvement
+
+## Core Principles
+
+### Principle 1: Data Aggregation is the Foundation
+
+GTM engineering succeeds when it connects data that normally stays siloed.
+
+**The Data Stack:**
+```
+Product Usage (Snowflake, BigQuery, Amplitude)
+        ↓
+CRM Context (Salesforce, HubSpot)
+        ↓
+Conversation Intelligence (Gong, Chorus)
+        ↓
+Marketing Automation (Customer.io, Iterable)
+        ↓
+Support Tickets (Zendesk, Linear)
+        ↓
+Public Signals (LinkedIn, news, hiring)
+```
+
+**Implementation:**
+1. Set up API access to each data source
+2. Define queries that pull relevant metrics
+3. Store in a unified data model
+4. Make accessible via AI-friendly interfaces
+
+### Principle 2: Personalization at Scale, Not Templates
+
+Templates provide structure but not storytelling.
+
+**The Problem with Templates:**
+- Generic content under deadline pressure
+- Inconsistent quality across users
+- Static content that doesn't reflect current data
+- No narrative flow between slides
+
+**The Personalization Approach:**
+- Each customer/prospect gets materials tailored to their context
+- Automation handles the 90% — humans review the last 10%
+- Quality is consistent regardless of time pressure
+- Data is always current (not from a snapshot)
+
+### Principle 3: Product-Led GTM
+
+The most powerful GTM motion shows prospects exactly what success looks like.
+
+**Demo Transformation (Amplitude Example):**
+- Before: Spoofed analytics data from Google Sheets
+- After: Custom websites with simulated user journeys
+- Result: $10M+ influenced pipeline, 40+ custom demos
+
+**How to Implement:**
+1. Build demo environments that match prospect's product
+2. Simulate realistic user behavior
+3. Generate real analytics from simulated usage
+4. Show exactly what integration would look like
+
+### Principle 4: From Push to Pull
+
+Build GTM capabilities so valuable that teams pull for more.
+
+**Adoption Pattern:**
+1. Start with high-impact use case (e.g., automated QBRs)
+2. Push to a small pilot group
+3. Prove ROI with metrics
+4. Teams start pulling for more capabilities
+5. Scale based on demand
+
+**Signs of Success:**
+- Sales engineers asking "can you give us more?"
+- Requests for specific use cases you hadn't planned
+- Self-serve adoption without training
+
+## The GTM Engineering Workflow
+
+### Step 1: Identify the Manual Process
+What takes hours that should take minutes?
+
+**Common Candidates:**
+- QBR deck creation (6 hours → 10 minutes)
+- Demo environment setup (2 hours → on-demand)
+- Prospect research (30 minutes → instant enrichment)
+- Executive briefing generation (4 hours → scheduled/automated)
+
+### Step 2: Map the Data Sources
+Where does the information live?
+
+**For QBRs:**
+- Product usage: Snowflake/BigQuery
+- CRM: Salesforce/HubSpot
+- Conversations: Gong/Chorus
+- Support: Zendesk/Linear
+
+**For Sales Demos:**
+- Product capabilities: Your product
+- Prospect context: Enrichment APIs
+- User journeys: Browser automation
+
+### Step 3: Design the Automation
+How do we connect data to output?
+
+**Components:**
+- Data aggregation layer (APIs, queries)
+- Transformation layer (AI, rules)
+- Output layer (slides, demos, dashboards)
+- Review layer (human approval)
+
+### Step 4: Build Incrementally
+Start simple, add complexity.
+
+**Progression:**
+1. Manual data pull + automated output
+2. Semi-automated data pull + automated output
+3. Fully automated pipeline with triggers
+4. Self-serve interfaces for teams
+
+### Step 5: Measure and Iterate
+Track impact on the metrics that matter.
+
+**Key Metrics:**
+- Time saved per task
+- Adoption rate (push vs. pull)
+- Revenue influenced
+- Quality scores (CSAT on outputs)
+
+## When to Apply GTM Engineering
+
+### High-Impact Scenarios
+
+**QBR/EBR Generation:**
+- Time-intensive (6+ hours per account)
+- High volume (dozens per quarter)
+- Data scattered across systems
+- Quality inconsistency risk
+
+**Sales Demo Personalization:**
+- Strategic accounts where generic demos fail
+- Complex products that need context to understand
+- Competitive situations requiring differentiation
+
+**Prospect Enrichment:**
+- Outbound campaigns needing personalization
+- Account-based marketing motions
+- Inbound lead qualification
+
+**Customer Health Scoring:**
+- Renewal prediction
+- Expansion opportunity detection
+- Churn prevention
+
+### Lower-Priority Scenarios
+
+**One-off Decks:**
+- If created rarely, automation ROI is low
+- Better to use templates
+
+**Small Accounts:**
+- If time saved is minimal, focus on high-value accounts first
+
+## Common Pitfalls
+
+### Pitfall 1: Automating Before Understanding
+Don't build automation for processes you don't understand.
+
+**Solution:** Manual process first, then automate.
+
+### Pitfall 2: Over-Engineering the Output
+Perfection is the enemy of shipping.
+
+**Solution:** Aim for 90% complete, let humans handle the last 10%.
+
+### Pitfall 3: Ignoring Data Quality
+Automation amplifies data quality issues.
+
+**Solution:** Invest in data hygiene and validation.
+
+### Pitfall 4: Building Without Users
+Engineering-driven automation often misses the mark.
+
+**Solution:** Co-build with the teams who will use it.
+
+## Tools and Technologies
+
+### Data Aggregation
+- **Data Warehouses:** Snowflake, BigQuery, Redshift
+- **ETL:** Fivetran, Airbyte, custom APIs
+- **Product Analytics:** Amplitude, Mixpanel, PostHog
+
+### Automation
+- **Browser Automation:** Browserbase, Stagehand, Playwright
+- **AI/LLM:** Claude, GPT-4, internal models
+- **Workflow:** n8n, Temporal, custom scripts
+
+### Output Generation
+- **Slides:** Slidev, PptxGenJS, Gamma
+- **Documents:** Google Docs API, Notion API
+- **Demos:** Custom environments, sandbox environments
+
+### CRM/Communication
+- **CRM:** Salesforce, HubSpot
+- **Communication:** Slack, Email
+- **Conversation Intelligence:** Gong, Chorus
+
+## Next Steps
+
+Based on the task at hand, load the appropriate rule file:
+
+- **Demo Automation:** `demo-automation.mdc`
+- **Deck Generation:** `deck-generation.mdc`
+- **Prospect Enrichment:** `prospect-enrichment.mdc`
+- **Customer Success:** `customer-success.mdc`
+- **Revenue Intelligence:** `revenue-intelligence.mdc`
+
+---
+
+*Remember: GTM Engineering is about automating the manual, personalizing at scale, and proving with data.*

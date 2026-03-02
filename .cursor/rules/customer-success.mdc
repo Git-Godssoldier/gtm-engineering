@@ -1,0 +1,160 @@
+---
+description: Customer success automation including usage analytics, health scoring, and renewal playbooks
+globs:
+alwaysApply: false
+---
+
+# Customer Success Automation
+
+## Overview
+
+Automate CS workflows including usage monitoring, health scoring, QBR generation, and renewal management.
+
+## When to Use This Rule
+
+- Health score calculation
+- Usage dashboards
+- Renewal preparation
+- Expansion detection
+- Churn prevention
+- QBR automation
+
+## Components
+
+### 1. Usage Analytics
+
+Track product engagement:
+- Active users over time
+- Feature adoption rates
+- Usage frequency
+- Depth of usage
+- Breadth of usage
+
+### 2. Health Scoring
+
+Calculate customer health based on multiple signals:
+
+```
+Health Score = (Usage Score * 0.4) + (Engagement Score * 0.3) + (Sentiment Score * 0.3)
+
+Usage Score:
+- DAU/MAU ratio
+- Feature adoption breadth
+- Usage trend (increasing/decreasing)
+
+Engagement Score:
+- Key stakeholder engagement
+- Support ticket sentiment
+- NPS/CSAT scores
+
+Sentiment Score:
+- Conversation tone (from Gong)
+- Expansion signals
+- Champion identification
+```
+
+### 3. Automated QBRs
+
+See deck-generation.mdc for full details.
+
+Trigger: Before scheduled QBR or on-demand.
+
+### 4. Renewal Management
+
+**90 Days Before Renewal:**
+- Generate renewal deck
+- Calculate ROI delivered
+- Identify expansion opportunities
+- Flag risks
+
+**60 Days Before:**
+- Send to account team
+- Schedule renewal call
+- Prepare negotiation points
+
+**30 Days Before:**
+- Final review
+- Executive briefing if needed
+
+### 5. Expansion Detection
+
+**Signals:**
+- Usage approaching limits
+- New feature requests
+- Additional user additions
+- New use cases mentioned
+- Positive ROI documented
+
+**Action:**
+- Alert account team
+- Generate expansion deck
+- Calculate upsell value
+
+### 6. Churn Prevention
+
+**Risk Signals:**
+- Usage declining
+- Key champion leaving
+- Support ticket spikes
+- Negative sentiment in calls
+- Competitor mentions
+
+**Action:**
+- Alert CS leadership
+- Generate risk analysis
+- Prepare save playbook
+
+## Workflow
+
+### Health Monitoring (Continuous)
+
+```
+Daily:
+├── Pull usage metrics
+├── Update health scores
+├── Check for alerts
+└── Notify on risks
+
+Weekly:
+├── Generate health report
+├── Flag at-risk accounts
+└── Recommend interventions
+
+Monthly:
+├── Generate account summaries
+├── Update renewal forecasts
+└── Identify expansion candidates
+```
+
+### Alert Thresholds
+
+| Signal | Warning | Critical |
+|--------|---------|----------|
+| Usage drop | >20% | >40% |
+| Login frequency | Weekly → Monthly | No login 30d |
+| Support tickets | 3x normal | 5x normal |
+| Sentiment score | <70 | <50 |
+
+## Metrics to Track
+
+- Net Revenue Retention (NRR)
+- Gross Revenue Retention (GRR)
+- Health score distribution
+- Time to value (TTV)
+- Expansion rate
+- Churn rate
+
+## Tools Stack
+
+- **Product Analytics**: Amplitude, Mixpanel
+- **CRM**: Salesforce, HubSpot
+- **Health Scoring**: Custom or Gainsight
+- **Conversation Intel**: Gong, Chorus
+- **QBR Generation**: See deck-generation.mdc
+
+## Best Practices
+
+1. **Automate monitoring, human intervention** - Alert but don't auto-act on risks
+2. **Multiple signals over single** - Health is multidimensional
+3. **Trend over point-in-time** - Direction matters more than snapshot
+4. **Proactive over reactive** - Catch issues early

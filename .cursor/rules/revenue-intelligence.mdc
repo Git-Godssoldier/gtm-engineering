@@ -1,0 +1,115 @@
+---
+description: Revenue intelligence including conversation analysis, deal coaching, and forecasting
+globs:
+alwaysApply: false
+---
+
+# Revenue Intelligence
+
+## Overview
+
+Analyze sales conversations, detect deal risks, and improve forecast accuracy using AI and data integration.
+
+## When to Use This Rule
+
+- Call analysis and coaching
+- Deal risk detection
+- Forecast improvement
+- Competitive intelligence
+- Win/loss analysis
+
+## Components
+
+### 1. Conversation Intelligence
+
+**From Gong/Chorus Transcripts:**
+
+Extract:
+- Key topics discussed
+- Questions asked
+- Objections raised
+- Competitor mentions
+- Next steps agreed
+- Decision criteria
+- Timeline signals
+
+### 2. Deal Risk Detection
+
+**Risk Signals:**
+- No activity in 7+ days
+- Single stakeholder only
+- No champion identified
+- Competitor mentioned positively
+- Budget not confirmed
+- Timeline slipping
+
+**Action:**
+- Alert sales rep
+- Suggest coaching
+- Recommend next action
+
+### 3. Forecast Improvement
+
+**Pattern Recognition:**
+- Win rate by deal characteristics
+- Sales cycle length by segment
+- Conversion rates by stage
+- Risk factor correlation
+
+**Predictive Scoring:**
+- Deal close probability
+- Expected close date
+- At-risk deals
+
+### 4. Competitive Intelligence
+
+**Track:**
+- Competitor mentions in calls
+- Win/loss reasons
+- Competitive positioning effectiveness
+- Feature gaps cited
+
+### 5. Coaching Insights
+
+**Identify:**
+- Rep strengths/weaknesses
+- Talk track effectiveness
+- Objection handling patterns
+- Best practice sharing opportunities
+
+## Workflow
+
+### Post-Call Analysis
+
+```
+1. Transcribe call (automatic)
+2. Extract key insights (AI)
+3. Identify action items
+4. Update CRM
+5. Alert on risks
+```
+
+### Weekly Review
+
+```
+1. Aggregate team insights
+2. Identify coaching opportunities
+3. Update forecast
+4. Flag stuck deals
+```
+
+## Metrics
+
+- Call participation rate
+- Talk-to-listen ratio
+- Question effectiveness
+- Next step clarity
+- Forecast accuracy
+- Win rate by rep/segment
+
+## Best Practices
+
+1. **Automate capture, human action** - AI surfaces insights, humans act
+2. **Focus on controllables** - What can reps improve?
+3. **Positive coaching** - Celebrate wins, not just fix problems
+4. **Privacy matters** - Be transparent about recording/analysis

@@ -1,0 +1,94 @@
+---
+description: Quick-start guide for agents executing GTM engineering tasks
+globs:
+alwaysApply: true
+---
+
+# GTM Engineering Quick Start
+
+## How to Use This Repository
+
+### Step 1: Read the Overview
+Start with `.cursor/rules/gtm-overview.mdc` to understand core philosophy and principles.
+
+### Step 2: Identify Your Task Type
+Match your task to the appropriate rule file:
+
+| Task | Rule File |
+|------|-----------|
+| Create QBR/renewal deck | `deck-generation.mdc` |
+| Build personalized demo | `demo-automation.mdc` |
+| Enrich prospect data | `prospect-enrichment.mdc` |
+| Calculate health score | `customer-success.mdc` |
+| Analyze sales calls | `revenue-intelligence.mdc` |
+
+### Step 3: Follow the Playbook
+Each rule file links to detailed playbooks in the `playbooks/` directory.
+
+### Step 4: Use Templates
+Apply templates from `templates/` for output formatting.
+
+### Step 5: Reference Examples
+Check `examples/` for real-world case studies.
+
+## Immediate Actions for Opulentia
+
+Based on the gathered GTM resources, here are the highest-impact tasks an agent should execute:
+
+### Priority 1: Automated QBR Generation
+**Impact:** 36x time savings (6 hours → 10 minutes)
+**Playbook:** `playbooks/qbr-generation.md`
+**Data Sources:** Snowflake, Salesforce, Gong, Zendesk
+
+**First Action:**
+1. Identify next scheduled QBR
+2. Query product usage from analytics
+3. Pull CRM context
+4. Process Gong transcripts
+5. Generate deck
+
+### Priority 2: Sales Demo Personalization
+**Impact:** Higher close rates on strategic deals
+**Playbook:** `playbooks/sales-demo.md`
+**Tools:** Browserbase, Stagehand, AI coding tools
+
+**First Action:**
+1. Identify strategic prospect with upcoming demo
+2. Run enrichment pipeline
+3. Build custom demo environment
+4. Simulate user journeys
+5. Deliver to sales engineer
+
+### Priority 3: Customer Health Scoring
+**Impact:** Proactive retention and expansion
+**Rule:** `customer-success.mdc`
+
+**First Action:**
+1. Pull usage data for all accounts
+2. Calculate health scores
+3. Flag at-risk accounts
+4. Identify expansion candidates
+
+## Key Metrics to Track
+
+| Metric | Target |
+|--------|--------|
+| QBR generation time | <15 min |
+| Demo prep time | <30 min |
+| Health score coverage | 100% accounts |
+| Enrichment freshness | Weekly update |
+
+## Resources
+
+- **Founding Sales:** https://www.foundingsales.com/
+- **High Growth Handbook:** https://growth.eladgil.com/
+- **GTM Engineering Blog:** https://thegtme.com/
+- **Browserbase Blog:** https://www.browserbase.com/blog/
+
+## Remember
+
+> "The system works because it solves the two hardest problems: aggregating scattered data and transforming that data into compelling narrative content." — Clay
+
+> "For strategic customers, you really need to resonate with their unique use cases. By showing them what their business will look like when they start using [your product]." — Amplitude
+
+**Automate the manual. Personalize at scale. Prove with data.**
