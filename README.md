@@ -76,7 +76,8 @@ gtm-engineering/
 ├── templates/               # Output templates
 │   ├── qbr-slide-deck.md    # QBR structure template
 │   ├── sales-one-pager.md   # Sales one-pager template
-│   └── health-score-card.md # Customer health dashboard
+│   ├── health-score-card.md # Customer health dashboard
+│   └── writing-and-framing.md # AI product messaging templates
 ├── examples/                # Real-world examples
 │   └── clay-automation.md   # Clay's deck automation case study
 ├── data-sources/            # Integration documentation
